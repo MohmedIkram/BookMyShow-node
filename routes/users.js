@@ -119,7 +119,7 @@ router.route("/signup").post(async (request, respone) => {
     await user.save();
     // db to store it
     respone.send(user);
-    response.redirect(`${process.env.url}/users/login`);
+    // respone.redirect(`${process.env.url}/users/login`);
   } catch (err) {
     respone.status(500);
     respone.send(err);
