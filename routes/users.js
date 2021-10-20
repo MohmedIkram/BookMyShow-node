@@ -94,7 +94,7 @@ router.route("/login").post(async (request, respone) => {
         token,
         message: "Successful login",
       });
-      response.redirect(`${process.env.url}/users/home`);
+      respone.redirect(`${process.env.url}/users/home`);
     }
   } catch (err) {
     respone.status(500);
